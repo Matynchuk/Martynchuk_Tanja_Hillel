@@ -3,7 +3,7 @@ import random
 #Задача 1. В змінній minute лежит число от 0 до 59, згенероване випадковим чином.
 #Визначте в якій четверті години попадає це число (в першій, другій, третій чи четвертій).
 
-minute = random.randint(0,60)
+minute = random.randint(0,59)
 print(minute)
 if minute >= 0 and minute <= 15:
         print('It is the first quarter')
@@ -11,7 +11,7 @@ elif minute > 15 and minute <= 30:
     print('It is the second quarter')
 elif minute > 30 and minute <=45:
         print('It is the third quarter')
-elif minute > 45 and minute <=60:
+elif minute > 45 and minute <=59:
         print('It is the fourth quarter')
 
 #Задача 2. В змінній birth_month запишіть номер місяця вашого народження (дані введіть з консолі).
