@@ -45,16 +45,4 @@ print("This is list with min lenght: ", min_list)
 max_list = reduce(lambda  x, y: x if (x>y) else y, list_main)
 print("This is list with max lenght: ", max_list)
 
-def check_password(passw):
-    res_dict = [
-    lambda passw: any(x.isupper() for x in passw) or '\nВ пароле должна быть хотя бы одна буква в верхнем регистре',
-    lambda passw: any(x.islower() for x in passw) or '\nВ пароле должна быть хотя бы одна буква в нижнем регистре ',
-    lambda passw: any(x.isdigit() for x in passw) or '\nВ пароле должна быть хотя бы одна цифра',
-    lambda passw: any(x in '!@#$%^&*()-+' for x in passw) or '\nПароль должен содержать один из спецсимволов !@#$%^&*()-+',
-    lambda passw: len(passw) >= 9 or '\nПароль должен содержать не менее 9 символов']
-    result = [x for x in [i(passw) for i in res_dict] if x != True]
-    if not result:
-        result.append('Надежный пароль')
-    return result
-st = input('Введите пароль для проверки: ')
-print(*check_password(st))
+
